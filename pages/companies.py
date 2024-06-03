@@ -50,6 +50,10 @@ def main():
 
         ass_urls = get_company_urls(company_id)
 
+        if st.button('Rescan Task'):
+            st.write("Tarea para reescanear enviada")
+            requests.post(f"{API_URL}/companies/{company_id}/rescan")
+
         if ass_urls:
             df = pd.DataFrame(ass_urls)
 
