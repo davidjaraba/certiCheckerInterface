@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import requests
 
-API_URL = "http://localhost:8000/api"
+API_URL = "http://13.48.127.34:8000/api"
 
 
 class Home:
