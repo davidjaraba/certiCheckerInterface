@@ -1,10 +1,15 @@
+import os
 import streamlit as st
 import requests
 import pandas as pd
 
 st.title("CERTI CHECKER")
 
-API_URL = "http://localhost:8000/api"  # Cambia esto por la URL de tu API
+from dotenv import load_dotenv
+
+load_dotenv()
+
+API_URL = os.getenv("API_URL")
 
 
 def list(ent):

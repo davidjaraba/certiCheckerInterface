@@ -1,12 +1,14 @@
 import base64
+import os
 from datetime import datetime
-
 import streamlit as st
 import pandas as pd
 import requests
+from dotenv import load_dotenv
 
-API_URL = "http://localhost:8000/api"
+load_dotenv()
 
+API_URL = os.getenv("API_URL")
 
 def get_resource(resource_id):
     """Obtiene y muestra un certificado."""

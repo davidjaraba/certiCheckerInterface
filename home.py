@@ -1,8 +1,12 @@
+import os
 import streamlit as st
 import pandas as pd
 import requests
+from dotenv import load_dotenv
 
-API_URL = "http://13.48.127.34:8000/api"
+load_dotenv()
+
+API_URL = os.getenv("API_URL")
 
 
 class Home:

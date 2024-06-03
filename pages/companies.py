@@ -1,8 +1,13 @@
+import os
 import streamlit as st
 import pandas as pd
 import requests
 
-API_URL = "http://localhost:8000/api"
+from dotenv import load_dotenv
+
+load_dotenv()
+
+API_URL = os.getenv("API_URL")
 
 
 def get_company(company_id):
