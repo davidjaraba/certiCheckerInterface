@@ -31,6 +31,9 @@ def get_company_urls(company_id):
 
 
 def main():
+    if not st.query_params:
+        return
+
     resource_id = st.query_params['id']
     resource = get_resource(resource_id)
     certificate = resource['certificate']

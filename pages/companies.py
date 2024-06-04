@@ -42,6 +42,9 @@ def create_company(company_id, url):
 
 
 def main():
+    if not st.query_params:
+        return
+
     company_id = st.query_params['id']
     company = get_company(company_id)
 

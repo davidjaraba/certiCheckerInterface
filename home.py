@@ -27,7 +27,7 @@ def list(ent):
 def main():
     st.set_page_config(
         page_title="Certi Checker",
-        page_icon="♥"
+        page_icon="♥",
     )
 
     st.header("CERTI Checker")
